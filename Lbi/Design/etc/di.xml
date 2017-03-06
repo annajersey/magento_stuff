@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+ <preference for="Magento\Catalog\Block\Product\View\Options\Type\Select" type="Lbi\Design\Block\Product\View\Options\Type\Select" /> 
+ <preference for="Magento\Authorizenet\Model\Directpost" type="Lbi\Design\Model\Directpost" />
+ <preference for="Magento\Shipping\Model\Shipping\Labels" type="Lbi\Design\Model\Shipping\Labels" />
+ <type name="Magento\Payment\Model\Method\AbstractMethod">
+        <plugin name="testValidate" type="Lbi\Design\Plugin\Model\Method\Available" sortOrder="1" disabled="false" />
+ </type>
+ <virtualType name="ShipmentGridAggregator" type="Magento\Sales\Model\ResourceModel\Grid">
+    <arguments>
+        <argument name="columns" xsi:type="array">
+            <item name="shipment_cost" xsi:type="string">sales_shipment.shipment_cost</item>
+        </argument>
+    </arguments>
+</virtualType>
+ <!--<type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="vendor_configurable_product_configurable" type="Lbi\Design\Block\Product\View\Type\Configurable" sortOrder="1"/>
+  </type>
+  <preference for="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable" type="Lbi\Design\Block\Product\View\Type\Configurable" /> -->
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Lbi_Import::system_configurable_import" title="Import Configurable" module="Lbi_Import" sortOrder="100" parent="Magento_Backend::system_convert" action="lbi/import" resource="Lbi_Import::import"/>
+    </menu>
+</config>

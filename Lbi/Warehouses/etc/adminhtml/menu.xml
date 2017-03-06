@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Lbi_Warehouses::warehouses" title="Warehouses" module="Lbi_Warehouses" sortOrder="80" action="warehouses/warehouses/index" resource="Lbi_Warehouses::warehouses"/>
+   	</menu>
+</config>

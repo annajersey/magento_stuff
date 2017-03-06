@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default"> 
+        <job name="lbi_warehouses_generate_pick_sheet_first_cron" instance="Lbi\Warehouses\Cron\GeneratePickSheet" method="pickSheetWarehouseFirst">
+            <schedule>0 9,12,15 * * *</schedule>          
+        </job>
+		<job name="lbi_warehouses_generate_pick_sheet_second_cron" instance="Lbi\Warehouses\Cron\GeneratePickSheet" method="pickSheetWarehouseSecond">
+            <schedule>0 11,14,16 * * *</schedule>          
+        </job>
+    </group>
+</config>

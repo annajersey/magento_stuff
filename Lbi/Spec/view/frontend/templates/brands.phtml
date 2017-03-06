@@ -1,0 +1,17 @@
+
+<?php $brands = $this->getBrands(); ?>
+<div class="brand-list">  
+    	
+        <ul class="grid">               
+    	<? foreach($brands as $brand): ?>
+        	
+           	<li>
+            	<div class="pic">
+					<a href="<?php echo $this->getBaseUrl(); ?>catalogsearch/result/index/?brand=<?=$brand ["value"]?>&q=<?=$brand ["label"]?>" title="<?=$brand ["label"];?>"><img src="<?php echo $block->getViewFileUrl('Lbi_Spec::images/'.$brand ["label"].'.png'); ?>"/></a>
+                </div>
+            </li>
+           
+		<? endforeach; ?>
+		</ul>     	
+                   
+     </div>

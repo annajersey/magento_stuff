@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="picksheet_email_template" label="Picksheet" file="picksheet.html" type="html" module="Lbi_Warehouses" area="adminhtml"/>
+</config>

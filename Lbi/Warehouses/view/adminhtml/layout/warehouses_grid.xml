@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="admin.warehouses.grid">
+            <block class="Magento\Backend\Block\Widget\Grid" name="promo.warehouses.grid" as="grid">
+                <arguments>
+                    <argument name="id" xsi:type="string">warehouses</argument>
+                    <argument name="dataSource" xsi:type="object">Lbi\Warehouses\Model\Resource\Warehouses\Collection</argument>
+                    <argument name="default_sort" xsi:type="string">name</argument>
+                    <argument name="default_dir" xsi:type="string">ASC</argument>
+                    <argument name="save_parameters_in_session" xsi:type="string">1</argument>
+                </arguments>
+				<!--
+				<block class="Magento\Backend\Block\Widget\Grid\Massaction" 
+                    name="lbi_warehouses_warehouses.grid.massaction" as="grid.massaction">
+                    <arguments>
+                        <argument name="massaction_id_field" xsi:type="string">id</argument>
+                        <argument name="form_field_name" xsi:type="string">warehouses</argument>
+                        <argument name="options" xsi:type="array">
+                            <item name="delete" xsi:type="array">
+                                <item name="label" xsi:type="string" translate="true">
+                                    Delete
+                                </item>
+                                <item name="url" xsi:type="string">*/*/massDelete</item>
+                                <item name="confirm" xsi:type="string" translate="true">
+                                    Are you sure you want to delete?
+                                </item>
+                            </item>
+                        </argument>
+                    </arguments>
+                </block>
+				-->
+                <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="promo.warehouses.grid.columnSet" as="grid.columnSet">
+					<arguments>
+                        <argument name="rowUrl" xsi:type="array">
+                            <item name="path" xsi:type="string">*/*/edit</item>
+                            <item name="extraParamsTemplate" xsi:type="array">
+                                <item name="id" xsi:type="string">getId</item>
+                            </item>
+                        </argument>
+                    </arguments>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="id">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">ID</argument>
+                            <argument name="index" xsi:type="string">id</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="column_css_class" xsi:type="string">col-id</argument>
+                            <argument name="header_css_class" xsi:type="string">col-id</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="name">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Name</argument>
+                            <argument name="index" xsi:type="string">name</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="column_css_class" xsi:type="string">col-id</argument>
+                            <argument name="header_css_class" xsi:type="string">col-id</argument>
+                        </arguments>
+                    </block>
+					<block class="Magento\Backend\Block\Widget\Grid\Column" as="location">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Location</argument>
+                            <argument name="index" xsi:type="string">location</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="column_css_class" xsi:type="string">col-id</argument>
+                            <argument name="header_css_class" xsi:type="string">col-id</argument>
+                        </arguments>
+                    </block>
+					<block class="Magento\Backend\Block\Widget\Grid\Column" as="emails">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Email</argument>
+                            <argument name="index" xsi:type="string">email</argument>
+                            <argument name="type" xsi:type="string">text</argument>
+                            <argument name="column_css_class" xsi:type="string">col-id</argument>
+                            <argument name="header_css_class" xsi:type="string">col-id</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

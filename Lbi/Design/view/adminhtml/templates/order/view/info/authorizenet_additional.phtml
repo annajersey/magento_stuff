@@ -1,0 +1,4 @@
+<br>
+<p>Last 4 digits: <?php echo $block->getCcLast4(); ?></p>
+<p>CC Type: <?php echo $block->getCcType(); ?></p>
+<p>Total Amount: <?php echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($block->getAmountPaid(),true,false); ?></p>

@@ -1,0 +1,46 @@
+.brand-list .grid{
+    
+        width:100%;
+}
+.brand-list .grid li{
+        
+        overflow:hidden;
+        text-align:center;
+}
+
+.brand-list .grid li .pic{
+        
+        height:200px;
+        line-height:200px;
+        vertical-align:middle;
+        padding:15% 0;
+}
+
+.brand-list .grid li .pic img{
+        max-width:120px;
+        margin:0 auto;
+
+}
+*/
+.brand-list .grid{
+    width:100%;
+}
+.brand-list .grid li{
+    width:20%;
+    float:left;
+    overflow:hidden;
+    text-align:center;
+}
+
+.brand-list .grid li .pic{
+    height:200px;
+    line-height:200px;
+    vertical-align:middle;
+    padding:15%;
+}
+
+.brand-list .grid li .pic img{
+    max-width:140px;
+    margin:0 auto;
+
+}
